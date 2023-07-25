@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC98D8732A6FF9A300DF24D8 /* External.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC98D8722A6FF9A300DF24D8 /* External.storyboard */; };
 		ACE960B32A6ACB4A001122DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B22A6ACB4A001122DB /* AppDelegate.swift */; };
 		ACE960B52A6ACB4A001122DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B42A6ACB4A001122DB /* SceneDelegate.swift */; };
 		ACE960B72A6ACB4A001122DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B62A6ACB4A001122DB /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 		ACE960CA2A6ACB4B001122DB /* Airplay2ndScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960C92A6ACB4B001122DB /* Airplay2ndScreenTests.swift */; };
 		ACE960D42A6ACB4B001122DB /* Airplay2ndScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960D32A6ACB4B001122DB /* Airplay2ndScreenUITests.swift */; };
 		ACE960D62A6ACB4B001122DB /* Airplay2ndScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960D52A6ACB4B001122DB /* Airplay2ndScreenUITestsLaunchTests.swift */; };
+		ACE960E52A6ACC21001122DB /* ExternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960E42A6ACC21001122DB /* ExternalViewController.swift */; };
+		ACE960E72A6ACF36001122DB /* AlternateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960E62A6ACF36001122DB /* AlternateViewController.swift */; };
+		ACE960EA2A6E8D17001122DB /* FeedMedia in Frameworks */ = {isa = PBXBuildFile; productRef = ACE960E92A6E8D17001122DB /* FeedMedia */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC98D8722A6FF9A300DF24D8 /* External.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = External.storyboard; sourceTree = "<group>"; };
 		ACE960AF2A6ACB4A001122DB /* Airplay2ndScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airplay2ndScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE960B22A6ACB4A001122DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE960B42A6ACB4A001122DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +54,8 @@
 		ACE960CF2A6ACB4B001122DB /* Airplay2ndScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Airplay2ndScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE960D32A6ACB4B001122DB /* Airplay2ndScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airplay2ndScreenUITests.swift; sourceTree = "<group>"; };
 		ACE960D52A6ACB4B001122DB /* Airplay2ndScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airplay2ndScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ACE960E42A6ACC21001122DB /* ExternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalViewController.swift; sourceTree = "<group>"; };
+		ACE960E62A6ACF36001122DB /* AlternateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlternateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE960EA2A6E8D17001122DB /* FeedMedia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +110,10 @@
 				ACE960B22A6ACB4A001122DB /* AppDelegate.swift */,
 				ACE960B42A6ACB4A001122DB /* SceneDelegate.swift */,
 				ACE960B62A6ACB4A001122DB /* ViewController.swift */,
+				ACE960E42A6ACC21001122DB /* ExternalViewController.swift */,
+				ACE960E62A6ACF36001122DB /* AlternateViewController.swift */,
 				ACE960B82A6ACB4A001122DB /* Main.storyboard */,
+				AC98D8722A6FF9A300DF24D8 /* External.storyboard */,
 				ACE960BB2A6ACB4B001122DB /* Assets.xcassets */,
 				ACE960BD2A6ACB4B001122DB /* LaunchScreen.storyboard */,
 				ACE960C02A6ACB4B001122DB /* Info.plist */,
@@ -143,6 +154,9 @@
 			dependencies = (
 			);
 			name = Airplay2ndScreen;
+			packageProductDependencies = (
+				ACE960E92A6E8D17001122DB /* FeedMedia */,
+			);
 			productName = Airplay2ndScreen;
 			productReference = ACE960AF2A6ACB4A001122DB /* Airplay2ndScreen.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = ACE960A62A6ACB4A001122DB;
+			packageReferences = (
+				ACE960E82A6E8D17001122DB /* XCRemoteSwiftPackageReference "iOS-SDK" */,
+			);
 			productRefGroup = ACE960B02A6ACB4A001122DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACE960BF2A6ACB4B001122DB /* LaunchScreen.storyboard in Resources */,
+				AC98D8732A6FF9A300DF24D8 /* External.storyboard in Resources */,
 				ACE960BC2A6ACB4B001122DB /* Assets.xcassets in Resources */,
 				ACE960BA2A6ACB4A001122DB /* Main.storyboard in Resources */,
 			);
@@ -258,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE960E72A6ACF36001122DB /* AlternateViewController.swift in Sources */,
 				ACE960B72A6ACB4A001122DB /* ViewController.swift in Sources */,
+				ACE960E52A6ACC21001122DB /* ExternalViewController.swift in Sources */,
 				ACE960B32A6ACB4A001122DB /* AppDelegate.swift in Sources */,
 				ACE960B52A6ACB4A001122DB /* SceneDelegate.swift in Sources */,
 			);
@@ -366,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -445,6 +465,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +494,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACE960E82A6E8D17001122DB /* XCRemoteSwiftPackageReference "iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/feedfm/iOS-SDK";
+			requirement = {
+				kind = exactVersion;
+				version = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACE960E92A6E8D17001122DB /* FeedMedia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE960E82A6E8D17001122DB /* XCRemoteSwiftPackageReference "iOS-SDK" */;
+			productName = FeedMedia;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACE960A72A6ACB4A001122DB /* Project object */;
 }

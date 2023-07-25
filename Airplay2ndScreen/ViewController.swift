@@ -1,4 +1,5 @@
 //
+//
 //  ViewController.swift
 //  Airplay2ndScreen
 //
@@ -6,12 +7,24 @@
 //
 
 import UIKit
+import FeedMedia
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        FMAudioPlayer.setClientToken("demo", secret:"demo")
+        var player = FMAudioPlayer.shared()
+        player.whenAvailable {
+            
+            
+            player.play()
+            
+        } notAvailable: {
+            
+        }
+
     }
 
 
