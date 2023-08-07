@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var avPlayer: AVPlayer?
+    var mainController : MainViewController?
+    var externalController : ExternalViewController?
+    var isExternalActive : Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

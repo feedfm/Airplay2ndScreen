@@ -10,7 +10,7 @@
 		AC98D8732A6FF9A300DF24D8 /* External.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC98D8722A6FF9A300DF24D8 /* External.storyboard */; };
 		ACE960B32A6ACB4A001122DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B22A6ACB4A001122DB /* AppDelegate.swift */; };
 		ACE960B52A6ACB4A001122DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B42A6ACB4A001122DB /* SceneDelegate.swift */; };
-		ACE960B72A6ACB4A001122DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B62A6ACB4A001122DB /* ViewController.swift */; };
+		ACE960B72A6ACB4A001122DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B62A6ACB4A001122DB /* MainViewController.swift */; };
 		ACE960BA2A6ACB4A001122DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE960B82A6ACB4A001122DB /* Main.storyboard */; };
 		ACE960BC2A6ACB4B001122DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE960BB2A6ACB4B001122DB /* Assets.xcassets */; };
 		ACE960BF2A6ACB4B001122DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE960BD2A6ACB4B001122DB /* LaunchScreen.storyboard */; };
@@ -18,7 +18,6 @@
 		ACE960D42A6ACB4B001122DB /* Airplay2ndScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960D32A6ACB4B001122DB /* Airplay2ndScreenUITests.swift */; };
 		ACE960D62A6ACB4B001122DB /* Airplay2ndScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960D52A6ACB4B001122DB /* Airplay2ndScreenUITestsLaunchTests.swift */; };
 		ACE960E52A6ACC21001122DB /* ExternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960E42A6ACC21001122DB /* ExternalViewController.swift */; };
-		ACE960E72A6ACF36001122DB /* AlternateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960E62A6ACF36001122DB /* AlternateViewController.swift */; };
 		ACE960EA2A6E8D17001122DB /* FeedMedia in Frameworks */ = {isa = PBXBuildFile; productRef = ACE960E92A6E8D17001122DB /* FeedMedia */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,7 @@
 		ACE960AF2A6ACB4A001122DB /* Airplay2ndScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airplay2ndScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE960B22A6ACB4A001122DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE960B42A6ACB4A001122DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACE960B62A6ACB4A001122DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACE960B62A6ACB4A001122DB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ACE960B92A6ACB4A001122DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACE960BB2A6ACB4B001122DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACE960BE2A6ACB4B001122DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +54,6 @@
 		ACE960D32A6ACB4B001122DB /* Airplay2ndScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airplay2ndScreenUITests.swift; sourceTree = "<group>"; };
 		ACE960D52A6ACB4B001122DB /* Airplay2ndScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airplay2ndScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ACE960E42A6ACC21001122DB /* ExternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalViewController.swift; sourceTree = "<group>"; };
-		ACE960E62A6ACF36001122DB /* AlternateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlternateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +107,8 @@
 			children = (
 				ACE960B22A6ACB4A001122DB /* AppDelegate.swift */,
 				ACE960B42A6ACB4A001122DB /* SceneDelegate.swift */,
-				ACE960B62A6ACB4A001122DB /* ViewController.swift */,
+				ACE960B62A6ACB4A001122DB /* MainViewController.swift */,
 				ACE960E42A6ACC21001122DB /* ExternalViewController.swift */,
-				ACE960E62A6ACF36001122DB /* AlternateViewController.swift */,
 				ACE960B82A6ACB4A001122DB /* Main.storyboard */,
 				AC98D8722A6FF9A300DF24D8 /* External.storyboard */,
 				ACE960BB2A6ACB4B001122DB /* Assets.xcassets */,
@@ -276,8 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACE960E72A6ACF36001122DB /* AlternateViewController.swift in Sources */,
-				ACE960B72A6ACB4A001122DB /* ViewController.swift in Sources */,
+				ACE960B72A6ACB4A001122DB /* MainViewController.swift in Sources */,
 				ACE960E52A6ACC21001122DB /* ExternalViewController.swift in Sources */,
 				ACE960B32A6ACB4A001122DB /* AppDelegate.swift in Sources */,
 				ACE960B52A6ACB4A001122DB /* SceneDelegate.swift in Sources */,
