@@ -15,6 +15,8 @@ The default Xcode template for a new UIKit project provides both an AppDelegate 
 Application Scene Manifest in Info.plist
 <img width="824" alt="Screenshot 2023-08-07 at 17 14 26" src="https://github.com/feedfm/Airplay2ndScreen/assets/9086361/e4cef691-ec24-4676-abc5-7ae101a48d50">
 
+```External Display Session Role (Legacy)``` was the originally unviled in iOS 13 however it was renamed to Legacy in iOS 16+ but continues to be supported as the Non interactive option is only really useful for iPad OS. 
+
 Notes
 * The presence of the “Application Scene Manifest” in Info.plist opts your app into supporting scenes. The scene delegate, not the app delegate, now owns the window.
 
@@ -28,7 +30,9 @@ window?.makeKeyAndVisible()
 *It is strongly recommended make changes to the Info.plist using the Info tab of the target settings rather than in the Info.plist that appears in the project navigator sidebar (see Xcode 13 Missing Info.plist). I still see problems with the two locations not keeping in sync when changing settings (FB9397345) which can be confusing.
 
 
-ScreenShots from the example app. 
+### Example app Notes
+
+The demo uses a single AVplayer but changes which view controller displays the video based on the no of screens connected. If an external screen is detected the Main screen stops the playback and acts as remote to control the playback on the external screen.
 
 No external screen attached
 
