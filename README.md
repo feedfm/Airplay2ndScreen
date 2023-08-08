@@ -13,7 +13,8 @@ Using Scene Delegates
 The default Xcode template for a new UIKit project provides both an AppDelegate and SceneDelegate. The default scene configuration in Info.plist sets the class of the scene delegate and the name of the storyboard used to load the main user interface:
 
 Application Scene Manifest in Info.plist
-<img width="824" alt="Screenshot 2023-08-07 at 17 14 26" src="https://github.com/feedfm/Airplay2ndScreen/assets/9086361/e4cef691-ec24-4676-abc5-7ae101a48d50">
+
+<img width="824" alt="Screenshot 2023-08-07 at 17 14 26" src="https://github.com/feedfm/Airplay2ndScreen/assets/9086361/97401917-b434-4ce1-842e-e8a91997f654">
 
 ```External Display Session Role (Legacy)``` was the originally unviled in iOS 13 however it was renamed to Legacy in iOS 16+ but continues to be supported as the Non interactive option is only really useful for iPad OS. 
 
@@ -36,11 +37,13 @@ The demo uses a single AVplayer but changes which view controller displays the v
 
 No external screen attached
 
-<img height="824" alt="Screenshot 2023-08-07 at 17 14 26" src="https://github.com/feedfm/Airplay2ndScreen/assets/9086361/8908dd91-4ced-43a2-95b4-e36cc5daf68a">
+<img height="824" alt="Screenshot 2023-08-07 at 17 14 26" src="https://github.com/feedfm/Airplay2ndScreen/assets/9086361/8253e839-5cc5-4d6e-838b-c02007c4d249">
 
 Playback on external screen
 
-<img height="824" alt="Screenshot 2023-08-07 at 17 14 26" src="https://github.com/feedfm/Airplay2ndScreen/assets/9086361/b15c7c15-dd35-4054-afa9-5cf07bccc674">
+<img height="824" alt="Screenshot 2023-08-07 at 17 14 26" src="https://github.com/feedfm/Airplay2ndScreen/assets/9086361/e72fa4e2-17c7-45ff-8fab-bfe75136d0a9">
 
 External TV Screen playback example 
-![External](https://github.com/feedfm/Airplay2ndScreen/assets/9086361/49f43328-78b0-450d-9913-be5ad0d8347a)
+
+![External](https://github.com/feedfm/Airplay2ndScreen/assets/9086361/a43651d8-4cdb-41ea-9762-35951815ea4c)
+
