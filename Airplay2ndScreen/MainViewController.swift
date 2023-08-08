@@ -73,11 +73,12 @@ class MainViewController: UIViewController {
         }
 
         let duration = Float(CMTimeGetSeconds(playerItem.duration))
-        slider.maximumValue = duration
-        slider.value = time
-        slider.isEnabled = true;
-        slider.isContinuous = true;
-        
+        if(duration > 0){
+            slider.maximumValue = duration
+            slider.value = time
+            slider.isEnabled = true;
+            slider.isContinuous = true;
+        }
         let seconds = Int(time) % 60
         let minutes = Int(time) / 60
 
