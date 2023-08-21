@@ -6,7 +6,7 @@ This demo is written in swift and works on iOS 13+. It makes use of Scene Delega
 
 ### Airplay vs Screen Mirroring
 Why pick screen mirroring over Airplay? 
-* The reason we consider this method to be superior is as a developer you get far more flexibility on what is shown to the user on the external screen. The demo included shows a basic interface on the TV or external screen but it can be modified to show just about anything while pure Airplay will sevearly limit you to just showing the video with default playback controls and nothing else. 
+* The reason we consider this method to be superior is as a developer you get far more flexibility on what is shown to the user on the external screen. The demo included shows a basic interface on the TV or external screen but it can be modified to show just about anything while pure Airplay will severely limit you to just showing the video with default playback controls and nothing else. 
 * In mirroring both the Audio streams are automatically moved the TV wihout any issues, while in case of Airplay only a single stream can played at any given time.
 
 Using Scene Delegates
@@ -28,7 +28,7 @@ window = UIWindow(windowScene: scene)
 window?.rootViewController = ExternalViewController()
 window?.makeKeyAndVisible()
 ```
-*It is strongly recommended make changes to the Info.plist using the Info tab of the target settings rather than in the Info.plist that appears in the project navigator sidebar (see Xcode 13 Missing Info.plist). I still see problems with the two locations not keeping in sync when changing settings (FB9397345) which can be confusing.
+It is strongly recommended make changes to the Info.plist using the Info tab of the target settings rather than in the Info.plist that appears in the project navigator sidebar (see Xcode 13 Missing Info.plist). I still see problems with the two locations not keeping in sync when changing settings which can be confusing.
 
 
 ### Example app Notes
