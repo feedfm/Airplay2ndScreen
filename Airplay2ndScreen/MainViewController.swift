@@ -72,7 +72,8 @@ class MainViewController: UIViewController {
             return
         }
 
-        let duration = Float(CMTimeGetSeconds(playerItem.duration))
+        let duration = CMTIME_IS_VALID(playerItem.duration) && !CMTIME_IS_INDEFINITE(playerItem.duration) ? Float(CMTimeGetSeconds(playerItem.duration)) : 0.0
+
         if(duration > 0){
             slider.maximumValue = duration
             slider.value = time
