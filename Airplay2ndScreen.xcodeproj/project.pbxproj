@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97C6D5642D5D51E500F130B2 /* FeedMedia in Frameworks */ = {isa = PBXBuildFile; productRef = 97C6D5632D5D51E500F130B2 /* FeedMedia */; };
 		AC98D8732A6FF9A300DF24D8 /* External.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC98D8722A6FF9A300DF24D8 /* External.storyboard */; };
 		ACE960B32A6ACB4A001122DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B22A6ACB4A001122DB /* AppDelegate.swift */; };
 		ACE960B52A6ACB4A001122DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B42A6ACB4A001122DB /* SceneDelegate.swift */; };
@@ -18,7 +19,6 @@
 		ACE960D42A6ACB4B001122DB /* Airplay2ndScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960D32A6ACB4B001122DB /* Airplay2ndScreenUITests.swift */; };
 		ACE960D62A6ACB4B001122DB /* Airplay2ndScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960D52A6ACB4B001122DB /* Airplay2ndScreenUITestsLaunchTests.swift */; };
 		ACE960E52A6ACC21001122DB /* ExternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960E42A6ACC21001122DB /* ExternalViewController.swift */; };
-		ACE960EA2A6E8D17001122DB /* FeedMedia in Frameworks */ = {isa = PBXBuildFile; productRef = ACE960E92A6E8D17001122DB /* FeedMedia */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACE960EA2A6E8D17001122DB /* FeedMedia in Frameworks */,
+				97C6D5642D5D51E500F130B2 /* FeedMedia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +152,7 @@
 			);
 			name = Airplay2ndScreen;
 			packageProductDependencies = (
-				ACE960E92A6E8D17001122DB /* FeedMedia */,
+				97C6D5632D5D51E500F130B2 /* FeedMedia */,
 			);
 			productName = Airplay2ndScreen;
 			productReference = ACE960AF2A6ACB4A001122DB /* Airplay2ndScreen.app */;
@@ -227,7 +227,7 @@
 			);
 			mainGroup = ACE960A62A6ACB4A001122DB;
 			packageReferences = (
-				ACE960E82A6E8D17001122DB /* XCRemoteSwiftPackageReference "iOS-SDK" */,
+				97C6D5622D5D51E500F130B2 /* XCRemoteSwiftPackageReference "iOS-SDK" */,
 			);
 			productRefGroup = ACE960B02A6ACB4A001122DB /* Products */;
 			projectDirPath = "";
@@ -622,20 +622,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ACE960E82A6E8D17001122DB /* XCRemoteSwiftPackageReference "iOS-SDK" */ = {
+		97C6D5622D5D51E500F130B2 /* XCRemoteSwiftPackageReference "iOS-SDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/feedfm/iOS-SDK";
 			requirement = {
-				kind = exactVersion;
-				version = 5.4.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ACE960E92A6E8D17001122DB /* FeedMedia */ = {
+		97C6D5632D5D51E500F130B2 /* FeedMedia */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ACE960E82A6E8D17001122DB /* XCRemoteSwiftPackageReference "iOS-SDK" */;
+			package = 97C6D5622D5D51E500F130B2 /* XCRemoteSwiftPackageReference "iOS-SDK" */;
 			productName = FeedMedia;
 		};
 /* End XCSwiftPackageProductDependency section */
