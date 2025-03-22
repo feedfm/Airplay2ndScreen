@@ -15,7 +15,7 @@ doesn't take full advantage of the screen, and the interface does not appear pol
 
 This sample app shows how you can take advantage of iOS's ability to detect and treat
 an AirPlay device as an 'external display' so that you can display your video, full
-screen, on the AirPlay device and while iOS also streams Feed Media music through it.
+screen, on the AirPlay device while iOS also streams Feed Media music through it.
 
 
 ## Sample App
@@ -25,15 +25,16 @@ display. When a user visits the control center, selects 'mirror screen' and sele
 device, the application has the option to provide a custom window to be rendered on the AirPlay
 device instead of a simple mirror of the iOS display.
 
-When the given app is run with no AirPlay connection the interface looks like the following:
+When this app is run with no AirPlay connection, the interface looks like the following:
 
 <img height="824" alt="Screenshot 2023-08-07 at 17 14 26" src="https://github.com/feedfm/Airplay2ndScreen/assets/9086361/8253e839-5cc5-4d6e-838b-c02007c4d249">
 
-When the user turns on AirPlay mirroring from the control center, the iOS display changes to look like this:
+When the user turns on AirPlay mirroring from the control center, video and audio (including Feed Media music) are
+transferred to the AirPlay device. The iOS display updates to look like the following:
 
 <img height="824" alt="Screenshot 2023-08-07 at 17 14 26" src="https://github.com/feedfm/Airplay2ndScreen/assets/9086361/e72fa4e2-17c7-45ff-8fab-bfe75136d0a9">
 
-and the external AirPlay device will display the following:
+and the external AirPlay device updates to display this:
 
 ![External](https://github.com/feedfm/Airplay2ndScreen/assets/9086361/a43651d8-4cdb-41ea-9762-35951815ea4c)
 
