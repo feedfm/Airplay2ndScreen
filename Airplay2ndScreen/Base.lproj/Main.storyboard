@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -175,19 +175,13 @@
                                     <constraint firstAttribute="trailing" secondItem="j1U-Su-cKH" secondAttribute="trailing" id="zcA-Wv-AoF"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To start airplay pull down the notifiation bar and select          icon" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjP-Wd-fBX">
-                                <rect key="frame" x="16" y="684" width="361" height="39"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To start airplay pull down the notification bar and select the mirror icon" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjP-Wd-fBX">
+                                <rect key="frame" x="16" y="684" width="361" height="41.666666666666629"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ScreenMirror" translatesAutoresizingMaskIntoConstraints="NO" id="34k-S6-tS3">
-                                <rect key="frame" x="57" y="704" width="37" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Jg-me-64t"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -203,6 +197,7 @@
                     <connections>
                         <outlet property="activityLabel" destination="fQV-xf-8rp" id="Wlf-y8-qWm"/>
                         <outlet property="elapsed" destination="eCI-IK-WHW" id="bWI-Sx-z8D"/>
+                        <outlet property="instructionLabel" destination="hjP-Wd-fBX" id="afc-GT-JWk"/>
                         <outlet property="musicControls" destination="Eal-6W-RPO" id="PZ8-1x-2iv"/>
                         <outlet property="playView" destination="a0N-U6-Xal" id="JkA-WT-CAp"/>
                         <outlet property="remaining" destination="5m0-lj-gE2" id="6YB-Jh-eYM"/>
@@ -220,7 +215,6 @@
     <resources>
         <image name="Pause" width="30" height="30"/>
         <image name="Play" width="30" height="30"/>
-        <image name="ScreenMirror" width="96.5" height="64"/>
         <image name="Skip" width="22" height="22"/>
         <image name="Sound" width="22" height="22"/>
         <image name="SoundMute" width="22" height="22"/>
