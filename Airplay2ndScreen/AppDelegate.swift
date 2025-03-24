@@ -7,34 +7,43 @@
 
 import UIKit
 import AVFoundation
+import FeedMedia
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var avPlayer: AVPlayer?
+    var avPlayer = AVPlayer(url: URL(string: "https://s3.amazonaws.com/feedfm/gladiator.m4v")!)
+    
     var mainController : MainViewController?
     var externalController : ExternalViewController?
     var isExternalActive : Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // initialize Feed Media music
+        FMAudioPlayer.setClientToken("demo", secret:"demo")
+
+        let player = FMAudioPlayer.shared()
+        player.whenAvailable {
+            // normally you would enable music playback buttons only after music
+            // has been reported as available
+            print("music is available for this client")
+
+        }  notAvailable: {
+            // normally your music playback buttons would continue to be disabled,
+            // so the user doesn't try to play music, which is not available
+            print("music is not available for this client")
+        }
+
         return true
     }
 
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
 
 }
 

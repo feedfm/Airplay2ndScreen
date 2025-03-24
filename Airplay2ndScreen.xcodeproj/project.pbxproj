@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		97C6D5642D5D51E500F130B2 /* FeedMedia in Frameworks */ = {isa = PBXBuildFile; productRef = 97C6D5632D5D51E500F130B2 /* FeedMedia */; };
+		97F1DBEF2D8A45A60097ED89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 97F1DBEE2D8A45A60097ED89 /* README.md */; };
 		AC98D8732A6FF9A300DF24D8 /* External.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC98D8722A6FF9A300DF24D8 /* External.storyboard */; };
 		ACE960B32A6ACB4A001122DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B22A6ACB4A001122DB /* AppDelegate.swift */; };
 		ACE960B52A6ACB4A001122DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE960B42A6ACB4A001122DB /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97F1DBEE2D8A45A60097ED89 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AC98D8722A6FF9A300DF24D8 /* External.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = External.storyboard; sourceTree = "<group>"; };
 		ACE960AF2A6ACB4A001122DB /* Airplay2ndScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airplay2ndScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE960B22A6ACB4A001122DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				ACE960C82A6ACB4B001122DB /* Airplay2ndScreenTests */,
 				ACE960D22A6ACB4B001122DB /* Airplay2ndScreenUITests */,
 				ACE960B02A6ACB4A001122DB /* Products */,
+				97F1DBEE2D8A45A60097ED89 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,6 +250,7 @@
 			files = (
 				ACE960BF2A6ACB4B001122DB /* LaunchScreen.storyboard in Resources */,
 				AC98D8732A6FF9A300DF24D8 /* External.storyboard in Resources */,
+				97F1DBEF2D8A45A60097ED89 /* README.md in Resources */,
 				ACE960BC2A6ACB4B001122DB /* Assets.xcassets in Resources */,
 				ACE960BA2A6ACB4A001122DB /* Main.storyboard in Resources */,
 			);

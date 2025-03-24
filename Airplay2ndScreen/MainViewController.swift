@@ -10,6 +10,8 @@ import UIKit
 import FeedMedia
 import AVKit
 
+let DEFAULT_TIME_STRING = "-:--"
+
 class MainViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
@@ -21,44 +23,83 @@ class MainViewController: UIViewController {
     @IBOutlet weak var stationLabel: UILabel!
     @IBOutlet weak var playView: UIView!
     @IBOutlet weak var activityLabel: UILabel!
-    
+    @IBOutlet weak var instructionLabel: UILabel!
     
     var playerLayer :AVPlayerLayer?
-    var isPresenting: Bool = false
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var playerTimeObserver : Any? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        // by default, hide the "Playing On External Screen" message
         activityLabel.isHidden = true
-    }
-  
-    func startPlayback() {
         
-         
-        if(appDelegate.avPlayer == nil) {
-            appDelegate.avPlayer = AVPlayer(url: URL(string: "https://s3.amazonaws.com/feedfm/gladiator.m4v")!)
+        // add scaled 'mirror' icon to explanatory text
+        let image = UIImage(named: "ScreenMirror")
+
+        let lineHeight = instructionLabel.font.lineHeight
+        let imageAspect = image!.size.width / image!.size.height
+        let targetHeight = lineHeight
+        let targetWidth = targetHeight * imageAspect
+
+        let resizedImage = UIGraphicsImageRenderer(size: CGSize(width: targetWidth, height: targetHeight)).image { _ in
+            image!.draw(in: CGRect(origin: .zero, size: CGSize(width: targetWidth, height: targetHeight)))
         }
-        // if presenting on another screen dismiss it
-        if(!isPresenting) {
-            intitalizePlayers()
+        
+        let mirrorImageAttachment = NSTextAttachment()
+        mirrorImageAttachment.image = resizedImage
+        
+        let instructionText = NSMutableAttributedString(string: "To start airplay pull down the notifiation bar and select the ")
+        instructionText.append(NSAttributedString(attachment: mirrorImageAttachment))
+        instructionText.append(NSAttributedString(string: " mirror icon"))
+        instructionLabel.attributedText = instructionText
+        
+        // update elapsed time as we play the video
+        let interval = CMTimeMake(value: 5, timescale: 10) // every half second
+        appDelegate.avPlayer.addPeriodicTimeObserver(forInterval: interval, queue: .main) { time in
+            let seconds = Float(CMTimeGetSeconds(time))
+            self.updateElapsedAndRemainingLabels(for: seconds)
         }
-       
     }
     
     
+    func enableVideoPlayback() {
+        if(playerLayer == nil) {
+            // hide "Playing On External Screen" label
+            activityLabel.isHidden = true
+            
+            // create video player
+            playerLayer = AVPlayerLayer.init(player: appDelegate.avPlayer)
+            playerLayer?.frame = playView.bounds
+            playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            playView.layer.addSublayer(playerLayer!)
+            playView.layer.addSublayer(musicControls.layer)
+        }
+    }
+    
+    func disableVideoPlayback(){
+        // remove video player
+        playerLayer?.removeFromSuperlayer();
+        playerLayer = nil
+        
+        // dispay instructive text
+        activityLabel.text = "Playing On External Screen"
+        activityLabel.isHidden = false
+        
+    }
+
     @IBAction func workoutPlayPauseButtonWasTouched(_ sender: Any) {
         if workoutPlayPauseButton.isSelected {
-            // User wants to pause
-            appDelegate.avPlayer?.pause()
+            // Pause video and audio playback
+            appDelegate.avPlayer.pause()
             FMAudioPlayer.shared().pause()
+            
             workoutPlayPauseButton.isSelected = false
+            
         } else {
-            // User wants to play
-            appDelegate.avPlayer?.play()
+            // Start or resume video and audio playback
+            appDelegate.avPlayer.play()
             FMAudioPlayer.shared().play()
-           
             
             workoutPlayPauseButton.isSelected = true
         }
@@ -67,8 +108,11 @@ class MainViewController: UIViewController {
     
     func updateElapsedAndRemainingLabels(for time: Float) {
         
-        let _playerItem = appDelegate.avPlayer?.currentItem
+        let _playerItem = appDelegate.avPlayer.currentItem
+        
         guard let playerItem = _playerItem else {
+            elapsed.text = DEFAULT_TIME_STRING
+            remaining.text = DEFAULT_TIME_STRING
             return
         }
 
@@ -91,55 +135,5 @@ class MainViewController: UIViewController {
         remaining.text = String(format: "%ld:%02ld", remainingMinutes, remainingSeconds)
     }
     
-    
-    func intitalizePlayers(){
-        
-        activityLabel.isHidden = true
-        FMAudioPlayer.setClientToken("demo", secret:"demo")
-        let player = FMAudioPlayer.shared()
-        player.whenAvailable { [self] in
-            
-            
-            isPresenting = true
-            playerLayer = AVPlayerLayer.init(player: appDelegate.avPlayer)
-             
-            playerLayer?.frame = self.playView.bounds
-            playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-            self.playView.layer.addSublayer(playerLayer!)
-            self.playView.layer.addSublayer(self.musicControls.layer)
-            workoutPlayPauseButton.isSelected = true
-            appDelegate.avPlayer?.play()
-            // begin playback of video
-            if(player.playbackState != .playing) {
-                player.play()	
-            }
-           
-            setObserver()
-        } notAvailable: {
-            
-        }
-    }
-    
-    fileprivate func setObserver() {
-        if(playerTimeObserver == nil) {
-            let interval = CMTimeMake(value: 5, timescale: 10) // every half second
-            playerTimeObserver = appDelegate.avPlayer?.addPeriodicTimeObserver(forInterval: interval, queue: .main) { time in
-                let seconds = Float(CMTimeGetSeconds(time))
-                self.updateElapsedAndRemainingLabels(for: seconds)
-            }
-        }
-    }
-    
-    func stripVideo(){
-        
-        
-        isPresenting = false
-        playerLayer?.removeFromSuperlayer();
-        playerLayer = nil
-        activityLabel.text = "Playing On External Screen"
-        activityLabel.isHidden = false
-        
-        setObserver()
-    }
 }
 
